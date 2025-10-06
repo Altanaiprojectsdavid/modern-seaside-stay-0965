@@ -12,6 +12,7 @@ import Contact from "./pages/Contact";
 import Amenities from "./pages/Amenities";
 import NotFound from "./pages/NotFound";
 import { LanguageProvider } from "./contexts/LanguageContext";
+import { AIChatWidget } from "./components/AIChatWidget";
 
 // Create a react-query client
 const queryClient = new QueryClient();
@@ -33,6 +34,7 @@ const App = () => (
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
+          <AIChatWidget />
         </BrowserRouter>
       </LanguageProvider>
     </TooltipProvider>
